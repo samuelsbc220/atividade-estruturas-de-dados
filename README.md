@@ -6,70 +6,28 @@
 
 ## Objetivo
 
-Investigar o comportamento de arrays, matrizes, algoritmos de ordenação e busca, analisando a quantidade de operações realizadas e a complexidade computacional.
+Investigar experimentalmente o comportamento de estruturas de dados e algoritmos fundamentais, relacionando arrays, matrizes, algoritmos de ordenação, busca, índices, loops e complexidade computacional.
 
----
+A atividade tem como foco comparar a quantidade de operações realizadas por diferentes algoritmos e analisar como o aumento do tamanho da entrada influencia sua eficiência.
 
-# Parte 1 – Bubble Sort e Quick Sort
+## Organização da Atividade
 
-## Bubble Sort
+- **Parte 1 – Pesquisa:** Bubble Sort e Quick Sort
+- **Parte 2 – Experimento de Ordenação:** testes com arrays de 10, 20 e 1.000 elementos
+- **Parte 3 – Busca em Matrizes:** busca sequencial em matrizes 2x2, 10x10 e 100x100
+- **Parte 4 – Hands On 1:** Array de Temperaturas
+- **Parte 5 – Hands On 2:** Monitoramento de Sensores
+- **Parte 6 – Análise e Conclusão**
 
-O Bubble Sort compara elementos vizinhos e realiza trocas quando eles estão na ordem errada. Esse processo é repetido até que o vetor esteja ordenado.
+## Estrutura do Repositório
 
-- Melhor caso: O(n)
-- Caso médio: O(n²)
-- Pior caso: O(n²)
-
-### Vantagens
-- Fácil de entender e implementar;
-- Utiliza pouca memória;
-- Adequado para vetores pequenos.
-
-### Limitações
-- Realiza muitas comparações e trocas;
-- É pouco eficiente para grandes conjuntos de dados.
-
-### Uso recomendado
-Vetores pequenos e situações didáticas.
-
-### Uso não recomendado
-Grandes volumes de dados ou aplicações que precisam de alto desempenho.
-
----
-
-## Quick Sort
-
-O Quick Sort utiliza a estratégia de divisão e conquista. Ele escolhe um pivô e divide o vetor entre valores menores e maiores que esse pivô.
-
-- Melhor caso: O(n log n)
-- Caso médio: O(n log n)
-- Pior caso: O(n²)
-
-### Vantagens
-- Muito eficiente na prática;
-- Bom desempenho em vetores grandes;
-- Geralmente realiza menos operações que o Bubble Sort.
-
-### Limitações
-- É mais complexo que o Bubble Sort;
-- Pode atingir O(n²) dependendo da escolha do pivô;
-- Utiliza recursão.
-
-### Uso recomendado
-Vetores médios e grandes.
-
-### Uso não recomendado
-Situações em que é necessário garantir O(n log n) no pior caso.
-
-## Comparação
-
-| Característica | Bubble Sort | Quick Sort |
-|---|---|---|
-| Princípio | Compara elementos vizinhos | Divide o vetor utilizando um pivô |
-| Melhor caso | O(n) | O(n log n) |
-| Caso médio | O(n²) | O(n log n) |
-| Pior caso | O(n²) | O(n²) |
-| Uso de memória | O(1) | O(log n) em média |
-| Vantagem principal | Simplicidade | Melhor desempenho |
-| Limitação principal | Muitas operações | Depende da escolha do pivô |
-| Aplicação recomendada | Vetores pequenos | Vetores médios e grandes |
+```text
+atividade-estruturas-de-dados/
+│
+├── README.md
+├── parte1-pesquisa/
+├── parte2-ordenacao/
+├── parte3-busca-matriz/
+├── parte4-array/
+├── parte5-sensores/
+└── parte6-conclusao/

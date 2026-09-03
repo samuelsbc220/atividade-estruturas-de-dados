@@ -14,11 +14,8 @@ int main() {
     for (int i = 0; i < 5; i++) {
         float somaSensor = 0;
 
-        printf("\nSensor %d\n", i);
-
         for (int j = 0; j < 24; j++) {
-            printf("Temperatura no horario %d: ", j);
-            scanf("%f", &sensores[i][j]);
+            sensores[i][j] = 20 + i * 2 + (j % 10);
 
             somaSensor += sensores[i][j];
             somaGeral += sensores[i][j];
@@ -37,17 +34,17 @@ int main() {
         medias[i] = somaSensor / 24;
     }
 
-    printf("\nMedias dos sensores:\n");
+    printf("Medias dos sensores:\n");
 
     for (int i = 0; i < 5; i++) {
-        printf("Sensor %d: %.2f\n", i, medias[i]);
+        printf("Sensor %d: %.2f C\n", i, medias[i]);
     }
 
-    printf("\nMaior temperatura: %.2f\n", maiorTemperatura);
+    printf("\nMaior temperatura: %.2f C\n", maiorTemperatura);
     printf("Sensor responsavel: %d\n", sensorMaior);
-    printf("Horario: %d\n", horarioMaior);
+    printf("Horario: %dh\n", horarioMaior);
 
-    printf("\nMedia geral: %.2f\n", somaGeral / 120);
+    printf("\nMedia geral: %.2f C\n", somaGeral / 120);
 
     printf("\nDigite o limite de temperatura: ");
     scanf("%f", &limite);
@@ -60,7 +57,8 @@ int main() {
         }
     }
 
-    printf("Quantidade de leituras acima do limite: %d\n", acimaLimite);
+    printf("Quantidade de leituras acima de %.2f C: %d\n",
+           limite, acimaLimite);
 
     return 0;
 }
